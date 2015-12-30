@@ -3,6 +3,10 @@ canvas.width = canvas.clientWidth;
 canvas.height = canvas.clientHeight;
 var gl = canvas.getContext("experimental-webgl");
 
+if (!gl) {
+    throw new Error("WebGL not supported");
+}
+
 function loadShader(type, shaderSource) {
     var shader = gl.createShader(type);
     gl.shaderSource(shader, shaderSource);
@@ -25,8 +29,6 @@ void main() {
     vUv = uv;
     gl_Position = vec4(position, 1.0);
 }`;
-
-console.log("HMM", vertexShaderSource);
 
 var fragmentShaderSource = `precision highp float;
 uniform sampler2D tDiffuse;

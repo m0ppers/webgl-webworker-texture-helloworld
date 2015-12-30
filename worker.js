@@ -9,15 +9,4 @@ onmessage = function(event) {
         postMessage(imageData);
     }
     image.load(event.data);
-    return;
-    var req = new XMLHttpRequest();
-    req.open('GET', event.data);
-    req.responseType = 'arraybuffer';
-    req.onload = function() {
-        var arrayBuffer = req.response;
-        console.log(req.response.byteLength);
-        var byteArray = new ImageData(new Uint8ClampedArray(arrayBuffer), 256, 256);
-        postMessage(byteArray);
-    }
-    req.send();
 }
