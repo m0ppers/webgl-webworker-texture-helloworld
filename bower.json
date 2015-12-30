@@ -1,0 +1,21 @@
+{
+  "name": "webgl-webworker-texture-helloworld",
+  "authors": [
+    "Andreas Streichardt <andreas.streichardt@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jpgjs": "jpgjs-pdfjs#*"
+  }
+}
